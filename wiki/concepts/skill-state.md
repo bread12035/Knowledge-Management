@@ -6,7 +6,7 @@ summary: 每步只給程序規格、結構化狀態與最新觀察，推理用�
 domains: [ai-new-tech]
 sources: [raw/ai-new-tech/hakka-agent-system-reference.md#3.4, raw/ai-new-tech/structure-of-agent-system.md#5.3]
 evidence: [原文, 我的判斷, 討論結論]
-related: [agent-harness-design, pass-by-reference, single-writer, agent-system-memory-layers]
+related: [agent-harness-design, pass-by-reference, single-writer, agent-system-memory-layers, skill-state-x-event-log-current-state]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -45,3 +45,4 @@ next_review: 2026-11-19
 - [[pass-by-reference]]：refs 欄位放 handle
 - [[single-writer]]：多 agent 寫 state 的衝突處理
 - [[agent-system-memory-layers]]：EXEC_PLAN 與 state.json 的分工
+- [[skill-state-x-event-log-current-state]]：跨領域：保留歷史還是只保留狀態

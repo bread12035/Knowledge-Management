@@ -1,1 +1,179 @@
-{"version": 1, "raw": {}}
+{
+  "raw": {
+    "raw/ai-new-tech/ab-test-ai-evaluation-guide.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/ai-new-tech/ab-test-ai-evaluation-guide.note.md",
+      "sha256": "4807847284de64c54bcc5e95f5d1f1ca0af1b6ad2155d9911105073e808c501e"
+    },
+    "raw/ai-new-tech/agent-evaluation-harness-2-ab-test-guide.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/ai-new-tech/agent-evaluation-harness-2-ab-test-guide.note.md",
+      "sha256": "81bb30d9514b2becd3ba0b3cdc7e592fb9d934f5bc875994d820480fe7eb04f1"
+    },
+    "raw/ai-new-tech/anthropic-agent-memory-guide.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/ai-new-tech/anthropic-agent-memory-guide.note.md",
+      "sha256": "a3701cba15de9ee790c0be21b5977e5c043782953f7c556d75124e786218cc0c"
+    },
+    "raw/ai-new-tech/hakka-agent-system-reference.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/ai-new-tech/hakka-agent-system-reference.note.md",
+      "sha256": "41c6ab110a6c8cc0b41c82f07b982ab0358a640924809a79e0bb0062804aacea"
+    },
+    "raw/ai-new-tech/model-evals-product-evals.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/ai-new-tech/model-evals-product-evals.note.md",
+      "sha256": "c989307f7f58be846a1ec354d6106fb2b3561af8e0d25b157e69462d23b334f3"
+    },
+    "raw/ai-new-tech/ontology-knowledge-graph-guide.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/ai-new-tech/ontology-knowledge-graph-guide.note.md",
+      "sha256": "71a077c04077f4dc4cec335d130234c09f1d48f8c00c2c304d2c398ad5342263"
+    },
+    "raw/ai-new-tech/paired-test-guide.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/ai-new-tech/paired-test-guide.note.md",
+      "sha256": "7935529f402ec30a621a78ad82c9214b333870dd6567a0d818cf2ba47a24c15b"
+    },
+    "raw/ai-new-tech/structure-of-agent-system.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/ai-new-tech/structure-of-agent-system.note.md",
+      "sha256": "6e74d88e158e796c3a0f74b510b921816479e0dd6e5d4f82cbd273d818ba11c9"
+    },
+    "raw/system-design/data-freshness-watchdog-scanner-marker-golden-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/data-freshness-watchdog-scanner-marker-golden-pattern.note.md",
+      "sha256": "52cfab76784000119c09b93491c367433f692f921c28f46579749f028c2597df"
+    },
+    "raw/system-design/dunning-retry-webhook-idempotent-timingwheel-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/dunning-retry-webhook-idempotent-timingwheel-pattern.note.md",
+      "sha256": "5781790726bcc1d0ebea86f19853120d733116e82f1f81dc58893ce795129457"
+    },
+    "raw/system-design/earnings-pre-earnings-gcp-to-onprem-handover-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/earnings-pre-earnings-gcp-to-onprem-handover-pattern.note.md",
+      "sha256": "b6b0749f8752a4f07620c3cd91fc25477c1fb12582d1a953075d36585eb12322"
+    },
+    "raw/system-design/earnings-transcript-gcp-to-onprem-handover-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/earnings-transcript-gcp-to-onprem-handover-pattern.note.md",
+      "sha256": "cc41a744965c1e760b71022129fa103c53428334c414dbf8d3eec2a9b5cbdbf7"
+    },
+    "raw/system-design/earnings-video2text-gcp-to-onprem-handover-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/earnings-video2text-gcp-to-onprem-handover-pattern.note.md",
+      "sha256": "058927157120aab022bfe50793cdd974967fe930f84b775173c04b849980c482"
+    },
+    "raw/system-design/http-api-vs-html-curl-cloudflare-bot-policy.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/http-api-vs-html-curl-cloudflare-bot-policy.note.md",
+      "sha256": "e84fe8bc63eb0866216a747cddb5ca5f92e1e39c826d1faebdec640f504d1dd7"
+    },
+    "raw/system-design/onprem-to-gcp-traffic-flow-dns-proxy-gateway-mesh-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/onprem-to-gcp-traffic-flow-dns-proxy-gateway-mesh-pattern.note.md",
+      "sha256": "192e36b5714f30f823a1385edfa61df31b22e7e317e944d4c5732dbf49fec339"
+    },
+    "raw/system-design/pagerduty-escalation-chatops-runbook-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/pagerduty-escalation-chatops-runbook-pattern.note.md",
+      "sha256": "dddb8ff7f358ac47bd796e48019fbd9122e062017b14126bedd9d18e842d952b"
+    },
+    "raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/pessimistic-lock-vs-occ-cas-comparison.note.md",
+      "sha256": "39771ec2cedc07091618fa74061d3b3ebc2ccde2b99d844ccc95b6e027e0c064"
+    },
+    "raw/system-design/postgres-hub-hybrid-search-peer-spaced-repetition-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/postgres-hub-hybrid-search-peer-spaced-repetition-pattern.note.md",
+      "sha256": "52ae07947e8a2f3abaa1169b30a3880da353af3aa805cdd2636e4782fd3167e9"
+    },
+    "raw/system-design/postgres-sag-alias-golden-eval-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/postgres-sag-alias-golden-eval-pattern.note.md",
+      "sha256": "9e6d70c0c83be609d6fb2b9ee64c495548c4eb44ae06a7f3d8fee30ec6cb883a"
+    },
+    "raw/system-design/price-watch-tiered-fetch-cas-outbox-freshness-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/price-watch-tiered-fetch-cas-outbox-freshness-pattern.note.md",
+      "sha256": "cd3005e07ec5095993cfe6c3c3bcdf341b16095500ae672b16dd1fa5b86ebe54"
+    },
+    "raw/system-design/rag-methods-comparison.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/rag-methods-comparison.note.md",
+      "sha256": "01b44636e82b3739db9246fa03553ba015efe2ae33f26c5b49dfd0789a9d1e9a"
+    },
+    "raw/system-design/saga-outbox-idempotent-escalation-checkout-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/saga-outbox-idempotent-escalation-checkout-pattern.note.md",
+      "sha256": "1e0287e02805f1b88837d58a0d87d8beca2a91d842359c1f1f9d8a9912351002"
+    },
+    "raw/system-design/scanner-executor-timingwheel-nooa-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/scanner-executor-timingwheel-nooa-pattern.note.md",
+      "sha256": "b1b7ce2df4f64cb2040fdc659a998f0d52b1a656d5f435bb2e14744200398b89"
+    },
+    "raw/system-design/single-source-of-truth-postgres-gcs-release-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/single-source-of-truth-postgres-gcs-release-pattern.note.md",
+      "sha256": "df866b9aa02d135fc1fffb70df76428df4964f064885acdafc561b479116c9d6"
+    },
+    "raw/system-design/structured-rag-golden-eval-hexagonal-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/structured-rag-golden-eval-hexagonal-pattern.note.md",
+      "sha256": "d4c042f7fda8a3423aac6267d6ff8b6f6dfd5874a46507f3b9a5655a2d140c0a"
+    },
+    "raw/system-design/transactional-outbox-lease-reaper-idempotent-consumer-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/transactional-outbox-lease-reaper-idempotent-consumer-pattern.note.md",
+      "sha256": "b8d1c3926b92b268ecf4fa5409fd4a8535abbeb6ca40d28033f08afab76dae39"
+    },
+    "raw/system-design/trino-gateway-oidc-watermark-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/trino-gateway-oidc-watermark-pattern.note.md",
+      "sha256": "d927b0d36f33126bcad5334d78d15835d3eb37ec51fee4d1ddc536db3f5cca2d"
+    },
+    "raw/system-design/web-fetch-crawler-api-browser-agent-comparison.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/web-fetch-crawler-api-browser-agent-comparison.note.md",
+      "sha256": "c156901869aff74bb3c04ee01f679e5aa599a8eb9192f2c9a1864d6c1b7a9d70"
+    },
+    "raw/system-design/webhook-idempotent-worker-outbox-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-18",
+      "note": "notes/system-design/webhook-idempotent-worker-outbox-pattern.note.md",
+      "sha256": "c717a3983947a4adbf6933c8090c7983ff1232b652d66c4db3848c800315bb36"
+    }
+  },
+  "version": 1
+}

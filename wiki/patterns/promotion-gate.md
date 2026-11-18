@@ -3,10 +3,10 @@ id: promotion-gate
 title: 升級閘門：先 pending，重複出現才升級（Promotion gate）
 type: pattern
 summary: 新教訓、規則、決策先放待定區，在多個案例重複出現且有證據才升到長期或常駐層
-domains: [ai-new-tech]
-sources: [raw/ai-new-tech/structure-of-agent-system.md#4, raw/ai-new-tech/agent-evaluation-harness-2-ab-test-guide.md#7.7, raw/ai-new-tech/model-evals-product-evals.md#6.5, raw/ai-new-tech/anthropic-agent-memory-guide.md#5]
+domains: [ai-new-tech, system-design]
+sources: [raw/ai-new-tech/structure-of-agent-system.md#4, raw/ai-new-tech/agent-evaluation-harness-2-ab-test-guide.md#7.7, raw/ai-new-tech/model-evals-product-evals.md#6.5, raw/ai-new-tech/anthropic-agent-memory-guide.md#5, raw/system-design/rag-methods-comparison.md#怎麼分辨, raw/system-design/postgres-sag-alias-golden-eval-pattern.md#延伸一步]
 evidence: [使用者決定, 我的判斷, 原文, 第三方]
-related: [agent-system-memory-layers, harness2, grader-alignment, injected-context, error-analysis-loop]
+related: [agent-system-memory-layers, harness2, grader-alignment, injected-context, error-analysis-loop, deterministic-over-llm]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -32,6 +32,8 @@ next_review: 2026-11-19
 | Grader 規則 | pending 理由 | 2 到 3 個案例重複 | rubric |
 | 這個 repo | note、wiki | 關鍵且穩定 | PRIMER.md（deep 模式才更新） |
 
+- 系統設計的應用：記憶不確定時先放 Understanding、訊號夠強再升級成 Fact；alias 由 LLM 提議、人確認後才寫入 {我的判斷}
+
 ## 在設計中怎麼用
 - 什麼情況用：系統會從單次經驗自動產生規則或記憶，且這些規則會影響之後所有執行。
 - 怎麼用：定義待定區、升級條件（重複次數 + 證據）、升級去處、與交人的條件。
@@ -45,3 +47,4 @@ next_review: 2026-11-19
 - [[grader-alignment]]：rubric 規則的升級
 - [[injected-context]]：最上層、門檻最高
 - [[error-analysis-loop]]：失敗分類後決定升級什麼
+- [[deterministic-over-llm]]：LLM 提議、人或程式確認

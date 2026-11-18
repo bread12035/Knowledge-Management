@@ -6,7 +6,7 @@ summary: 寫入時附上讀到的版本 hash，不符就失敗並重讀重試，
 domains: [ai-new-tech]
 sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#10, raw/ai-new-tech/anthropic-agent-memory-guide.md#13.2]
 evidence: [官方文件, 使用者決定, 示意, 我的判斷]
-related: [single-writer, agent-memory, km-dreaming-design]
+related: [single-writer, agent-memory, km-dreaming-design, optimistic-concurrency-x-pessimistic-lock]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -48,3 +48,4 @@ t6  A 依新內容重新草擬，再送出（附 def）→ 成功
 - [[single-writer]]：從結構上避免衝突
 - [[agent-memory]]：記憶庫的版本與並行寫入
 - [[km-dreaming-design]]：D3 worker pool
+- [[optimistic-concurrency-x-pessimistic-lock]]：跨領域：樂觀鎖與悲觀鎖怎麼選，重做成本是關鍵

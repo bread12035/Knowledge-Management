@@ -6,7 +6,7 @@ summary: 離線回頭檢視 transcripts 與現有記憶，校正錯誤、建 wik
 domains: [ai-new-tech]
 sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#6, raw/ai-new-tech/anthropic-agent-memory-guide.md#7, raw/ai-new-tech/anthropic-agent-memory-guide.md#8]
 evidence: [原文, 官方文件, Cookbook, 我的判斷]
-related: [agent-memory, llm-wiki, injected-context, single-writer, pass-by-reference, km-dreaming-design, harness2]
+related: [agent-memory, llm-wiki, injected-context, single-writer, pass-by-reference, km-dreaming-design, harness2, dreaming-x-web-content-acquisition]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -43,3 +43,4 @@ next_review: 2026-11-19
 - [[agent-memory]]：dreaming 整理的四層
 - [[harness2]]：另一種「事後回顧、存下有效教訓」的機制
 - [[km-dreaming-design]]：這個知識庫的 dreaming 設計
+- [[dreaming-x-web-content-acquisition]]：跨領域：不可信輸入的共同對策

@@ -6,7 +6,7 @@ summary: LLM 把原始資料編譯成互相連結的頁面；跨文件問題幫�
 domains: [ai-new-tech]
 sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#4, raw/ai-new-tech/structure-of-agent-system.md#7]
 evidence: [原文, Cookbook, 討論結論, 使用者決定]
-related: [agent-memory, dreaming, ontology-knowledge-graph, progressive-disclosure, km-dreaming-design]
+related: [agent-memory, dreaming, ontology-knowledge-graph, progressive-disclosure, km-dreaming-design, llm-wiki-x-knowledge-retrieval-design]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -45,3 +45,4 @@ next_review: 2026-11-19
 - [[progressive-disclosure]]：索引 → 頁面 → 原文的讀取順序
 - [[ontology-knowledge-graph]]：另一種知識表示
 - [[km-dreaming-design]]：這個 repo 的 wiki 規則
+- [[llm-wiki-x-knowledge-retrieval-design]]：跨領域：wiki 與摘要分層、SQL catalog 的對照

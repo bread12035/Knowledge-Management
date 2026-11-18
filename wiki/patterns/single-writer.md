@@ -3,10 +3,10 @@ id: single-writer
 title: 單一寫入者（Single writer）
 type: pattern
 summary: 每份資料只讓一個寫入者負責，從結構上消除並行寫入衝突
-domains: [ai-new-tech]
-sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#6.2, raw/ai-new-tech/structure-of-agent-system.md#2, raw/ai-new-tech/structure-of-agent-system.md#6, raw/ai-new-tech/structure-of-agent-system.md#9]
+domains: [ai-new-tech, system-design]
+sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#6.2, raw/ai-new-tech/structure-of-agent-system.md#2, raw/ai-new-tech/structure-of-agent-system.md#6, raw/ai-new-tech/structure-of-agent-system.md#9, raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md#4, raw/system-design/rag-methods-comparison.md#5]
 evidence: [原文, 我的判斷, 使用者決定, 討論結論]
-related: [optimistic-concurrency, dreaming, skill-state, km-dreaming-design, agent-harness-design]
+related: [optimistic-concurrency, dreaming, skill-state, km-dreaming-design, agent-harness-design, pessimistic-lock]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -24,6 +24,9 @@ next_review: 2026-11-19
 - SQLite 同一時間只能有一個寫入者；並行寫入變多是往共用 DB 與外部 DB 升級的訊號 {討論結論}
 - 多個 subagent 不並行寫同一份 state.json，各寫自己的 patch 檔，由主 agent 合併 {我的判斷}
 
+## 細節
+- 系統設計的對應：single writer queue（所有寫入排一條隊由一個 worker 處理，不用鎖）；table 設計時一個來源對應一列或一頁 {討論結論}{我的判斷}
+
 ## 在設計中怎麼用
 - 什麼情況用：多個 agent、排程或 worker 會寫同一個儲存空間。
 - 怎麼用：
@@ -40,3 +43,4 @@ next_review: 2026-11-19
 - [[dreaming]]：LAB 案例出處
 - [[km-dreaming-design]]：這個 repo 的寫入者分工
 - [[agent-harness-design]]：使用者 agent system 的路徑擁有者表
+- [[pessimistic-lock]]：single writer queue 是並行寫入選項之一

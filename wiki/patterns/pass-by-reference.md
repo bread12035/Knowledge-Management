@@ -3,10 +3,10 @@ id: pass-by-reference
 title: Pass by reference（資料留在環境，prompt 只放引用）
 type: pattern
 summary: 大資料留在執行環境，context 只放 handle 與有界預覽，模型寫程式取聚合結果
-domains: [ai-new-tech]
-sources: [raw/ai-new-tech/hakka-agent-system-reference.md#3.3, raw/ai-new-tech/structure-of-agent-system.md#5.1, raw/ai-new-tech/structure-of-agent-system.md#6, raw/ai-new-tech/anthropic-agent-memory-guide.md#8.2]
+domains: [ai-new-tech, system-design]
+sources: [raw/ai-new-tech/hakka-agent-system-reference.md#3.3, raw/ai-new-tech/structure-of-agent-system.md#5.1, raw/ai-new-tech/structure-of-agent-system.md#6, raw/ai-new-tech/anthropic-agent-memory-guide.md#8.2, raw/system-design/scanner-executor-timingwheel-nooa-pattern.md#Why, raw/system-design/dunning-retry-webhook-idempotent-timingwheel-pattern.md#6, raw/system-design/structured-rag-golden-eval-hexagonal-pattern.md#業界經典範例]
 evidence: [原文, 討論結論, 我的判斷, Cookbook, 使用者決定]
-related: [agent-harness-design, skill-state, dreaming]
+related: [agent-harness-design, skill-state, dreaming, deterministic-over-llm]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -30,6 +30,8 @@ next_review: 2026-11-19
 - 小模型較不守 code-as-action 紀律：批次 bookkeeping 壓力測試通過率 70.8%，大模型 93.9% {原文}
 - 範例：50 萬列 CSV 落地到 `sandbox/<ID>/data.db`，context 只放 `df = DataFrame(rows=500000, cols=12, head/tail 各 5 列)`，模型寫 `groupby` 只印聚合結果 {討論結論}
 
+- 系統設計的應用：財報摘要把幾百列數字放暫存 SQLite 讓 agent 用 SQL 查；催款信只傳客戶 ID 讓 agent 查欄位；Uber QueryGPT 先結構化再產生 SQL {使用者決定}{討論結論}
+
 ## 在設計中怎麼用
 - 什麼情況用：檔案、查詢結果、trace、log 大到不該整份讀進 context。
 - 怎麼用：
@@ -44,3 +46,4 @@ next_review: 2026-11-19
 - [[agent-harness-design]]：三個省 token 機制之一
 - [[skill-state]]：state 的 `refs` 放 handle
 - [[dreaming]]：Cookbook 用路徑派工給 analyzer
+- [[deterministic-over-llm]]：同一原則：程式取資料，LLM 只判斷

@@ -6,7 +6,7 @@ summary: 固定題庫要代表 User 的需求：分 dev 與 held-out、對照題
 domains: [ai-new-tech]
 sources: [raw/ai-new-tech/model-evals-product-evals.md#0.1, raw/ai-new-tech/model-evals-product-evals.md#5, raw/ai-new-tech/ab-test-ai-evaluation-guide.md#2.6, raw/ai-new-tech/ab-test-ai-evaluation-guide.md#4.10]
 evidence: [討論結論, 我的判斷, 示意, 第三方]
-related: [ai-evaluation, paired-test, error-analysis-loop, primary-guardrail-gate]
+related: [ai-evaluation, paired-test, error-analysis-loop, primary-guardrail-gate, golden-dataset-x-golden-regression-gate]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -45,3 +45,4 @@ next_review: 2026-11-19
 - [[paired-test]]：題庫上的比較方法
 - [[error-analysis-loop]]：題庫缺什麼的來源
 - [[primary-guardrail-gate]]：Red Team 與回歸題是護欄
+- [[golden-dataset-x-golden-regression-gate]]：跨領域：統計比較與斷言回歸是同一工具的兩種用法
