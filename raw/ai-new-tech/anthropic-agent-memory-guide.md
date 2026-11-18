@@ -1,3 +1,10 @@
+---
+source_project: AI new tech & studies
+source_file: anthropic-agent-memory-guide.md
+title: Anthropic Agent Memory 整理指南
+first_exported: 2026-11-18
+updated: 2026-11-18
+---
 # Anthropic Agent Memory 整理指南
 
 整理日期：2026-11-09；2026-11-10 依原文與 Cookbook 全面核對；2026-11-10 加入實作設計（第 13 節）。修訂紀錄見第 17 節。
