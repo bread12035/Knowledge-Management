@@ -9,9 +9,9 @@ evidence: [使用者決定, 原文, 我的判斷]
 related: [agent-harness-design, agent-memory, promotion-gate, error-analysis-loop, skill-state, agent-system-memory-layers-x-saga-compensation]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-19
+review_count: 1
+next_review: 2026-11-22
 ---
 # 使用者 agent system 的五層記憶與升級規則
 

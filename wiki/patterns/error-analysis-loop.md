@@ -9,9 +9,9 @@ evidence: [討論結論, 使用者決定, 我的判斷]
 related: [ai-evaluation, golden-dataset, grader-alignment, primary-guardrail-gate, promotion-gate, agent-system-memory-layers]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-19
+review_count: 1
+next_review: 2026-11-22
 ---
 # Error analysis 回饋迴圈（Error analysis loop）
 

@@ -2,6 +2,16 @@
 
 每次 dreaming 執行一筆，新的在上。格式見 `prompts/dream.md` §7。
 
+## 2026-11-19 daily
+- raw：預期 0，處理 0，失敗 0，留待下次 0
+- notes：新增 無；更新 無
+- wiki：新增 無；更新 agent-memory（「並行寫入保護」一條的證據標記修正：single-writer 是 {我的判斷} 不是 {原文}；補來源 #10）；合併/取代 無
+- bridges：新增 無；候選 4 筆（新增 0；pending 1：grader-alignment ↔ watchdog evaluator，SD 側仍缺獨立頁）
+- revisit：agent-harness-design、agent-memory、agent-system-memory-layers、ai-evaluation、completion-marker、deterministic-over-llm、earnings-gcp-onprem-handover、error-analysis-loop（7 頁核對無誤 → review_count 1、next_review 2026-11-22；agent-memory 修正後歸 0、next_review 2026-11-20）
+- 留待下次：今天到期 41 頁，處理 8，剩 33 頁到期未複習（daily 上限 8）
+- lint：0 errors，0 warnings；wiki/raw 0.31
+- 待使用者處理：沿用：D3 是否改為單一寫入者（review/2026-W47.md）；earnings 與 SSOT 的待確認事實；複習排程是否改用 SM-2。另：種子執行讓 47 頁同日到期，daily 上限 8 頁需約 5 天才消化，可考慮在 trigger 加 `mode: deep` 跑一次
+
 ## 2026-11-18 daily
 - raw：預期 0，處理 0，失敗 0，留待下次 0
 - notes：新增 無；更新 無

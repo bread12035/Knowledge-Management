@@ -9,9 +9,9 @@ evidence: [使用者決定, 討論結論]
 related: [reliable-event-processing, event-driven-timer, idempotent-consumer, golden-regression-gate]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-19
+review_count: 1
+next_review: 2026-11-22
 ---
 # 用明確信號取代猜測的時間差（Completion marker）
 

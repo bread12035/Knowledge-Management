@@ -9,9 +9,9 @@ evidence: [使用者決定, 討論結論, 我的判斷]
 related: [knowledge-retrieval-design, web-content-acquisition, pass-by-reference, ai-evaluation, km-dreaming-design, golden-regression-gate]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-19
+review_count: 1
+next_review: 2026-11-22
 ---
 # 能用程式決定的不交給 LLM（Deterministic over LLM）
 

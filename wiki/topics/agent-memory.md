@@ -4,14 +4,14 @@ title: Agent memory 四層模型（Agent memory）
 type: topic
 summary: Transcripts → Notes → Wiki → Injected context，dreaming 在背景校正與整理各層
 domains: [ai-new-tech]
-sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#2, raw/ai-new-tech/anthropic-agent-memory-guide.md#6, raw/ai-new-tech/structure-of-agent-system.md#4]
-evidence: [原文, 使用者決定, 我的判斷]
+sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#2, raw/ai-new-tech/anthropic-agent-memory-guide.md#6, raw/ai-new-tech/anthropic-agent-memory-guide.md#10, raw/ai-new-tech/structure-of-agent-system.md#4]
+evidence: [原文, 使用者決定, 我的判斷, 官方文件]
 related: [dreaming, llm-wiki, injected-context, memory-salience, optimistic-concurrency, single-writer, km-dreaming-design, agent-system-memory-layers]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
+last_dreamed: 2026-11-19
 review_count: 0
-next_review: 2026-11-19
+next_review: 2026-11-20
 ---
 # Agent memory 四層模型（Agent memory）
 
@@ -23,7 +23,7 @@ next_review: 2026-11-19
 - 越上層越常被讀、要越小；最上層每個 session 都載入，錯誤會擴散到所有 session {原文}
 - 寫筆記是一種預測，前沿模型能自己判斷什麼值得記，見 [[memory-salience]] {原文}
 - [[dreaming]] 是離線過程：對照 transcripts 修正、整理成 wiki、把關鍵內容往上提升 {原文}
-- 並行寫同一份記憶要有保護：[[optimistic-concurrency]] 或 [[single-writer]] {原文}
+- 並行寫同一份記憶要有保護：原文用 `content_sha256` 做 [[optimistic-concurrency]] {官方文件}；改成每頁一個寫入者（[[single-writer]]）是對 LAB 失敗的推論 {我的判斷}
 
 ## 細節
 | 層 | 讀取時機 | 這個 repo 的對應 |
