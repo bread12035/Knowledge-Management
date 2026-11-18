@@ -47,6 +47,12 @@ PRIMER_LIMIT = 4096
 BLOAT_LIMIT = 1.2
 MAX_FAILURES = 3
 LINK_RE = re.compile(r"\[\[([a-z0-9][a-z0-9-]*)\]\]")
+CODE_RE = re.compile(r"```.*?```|`[^`\n]*`", re.S)
+
+
+def links(body: str) -> set[str]:
+    """[[slug]] links outside code fences and inline code."""
+    return set(LINK_RE.findall(CODE_RE.sub("", body)))
 
 
 def today() -> dt.date:
@@ -265,7 +271,7 @@ def cmd_lint(_: list[str]) -> int:
                 warns.append(f"{r}: {size} bytes > {PAGE_LIMIT}; consider splitting")
     inbound: dict[str, int] = {s: 0 for s in pages}
     for slug, (p, meta, body) in pages.items():
-        targets = set(LINK_RE.findall(body)) | set(meta.get("related", []))
+        targets = links(body) | set(meta.get("related", []))
         if meta.get("moved_to"):
             targets.add(meta["moved_to"])
         for t in targets:
@@ -274,7 +280,7 @@ def cmd_lint(_: list[str]) -> int:
             elif t != slug:
                 inbound[t] += 1
         for t in meta.get("related", []):
-            if t in pages and f"[[{t}]]" not in body:
+            if t in pages and t not in links(body):
                 warns.append(f"{rel(p)}: related '{t}' not linked in body")
     for slug, n in inbound.items():
         meta = pages[slug][1]
