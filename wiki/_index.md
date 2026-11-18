@@ -59,8 +59,10 @@
 
 ## 跨領域連結 Bridges
 
+- [[agent-system-memory-layers-x-saga-compensation]] `AI/SD` — 兩邊都承認自動化會走到盡頭；事先寫好停止條件，停下時留下完整狀態，再交給人
 - [[dreaming-x-web-content-acquisition]] `AI/SD` — 兩邊都讓 agent 讀不受控的文字；共同對策是當資料不當指示、縮小權限與爆炸半徑、關鍵動作交人
 - [[golden-dataset-x-golden-regression-gate]] `AI/SD` — 同一個工具的兩種用法：AI 評估用統計比較兩版，系統設計用斷言擋住退步；都要求事先固定、只改一處、失敗回填
 - [[llm-wiki-x-knowledge-retrieval-design]] `AI/SD` — 兩邊都在寫入時先整理、查詢時先看小的再往下鑽；差別是 wiki 用 LLM 寫的連結頁，檢索設計用 SQL 篩選加 L0/L1/L2 摘要
+- [[ontology-knowledge-graph-x-knowledge-retrieval-design]] `AI/SD` — 兩邊都在處理「同一個東西有不同寫法」；Graph 在寫入時合併成一個節點，SAG 不合併、在查詢時用 alias 表展開
 - [[optimistic-concurrency-x-pessimistic-lock]] `AI/SD` — 兩者都在處理「兩個寫入者改同一份資料」；差別只在衝突何時處理，而重做成本決定該選哪一個
 - [[skill-state-x-event-log-current-state]] `AI/SD` — 兩者都在決定「保留歷史還是只保留狀態」；SKILL.state 丟掉歷史只留狀態，event log 保留歷史再算出狀態

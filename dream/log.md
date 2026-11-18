@@ -2,6 +2,15 @@
 
 每次 dreaming 執行一筆，新的在上。格式見 `prompts/dream.md` §7。
 
+## 2026-11-18 daily
+- raw：預期 0，處理 0，失敗 0，留待下次 0
+- notes：新增 無；更新 無
+- wiki：新增 ontology-knowledge-graph-x-knowledge-retrieval-design、agent-system-memory-layers-x-saga-compensation；更新 ontology-knowledge-graph、knowledge-retrieval-design、agent-system-memory-layers、saga-compensation（相關加 bridge 連結）、dreaming-x-web-content-acquisition（補來源 web-fetch…#8）；合併/取代 無
+- bridges：新增 ontology-knowledge-graph-x-knowledge-retrieval-design、agent-system-memory-layers-x-saga-compensation；候選 4 筆（新增 0；done 2、rejected 1：harness2 ↔ event-driven-timer 共同原理不成立、pending 1：grader-alignment ↔ watchdog evaluator，SD 側缺獨立頁）
+- revisit：dreaming-x-web-content-acquisition、golden-dataset-x-golden-regression-gate、llm-wiki-x-knowledge-retrieval-design、optimistic-concurrency-x-pessimistic-lock、skill-state-x-event-log-current-state、cuped、dreaming、golden-dataset（逐條對 raw 核對無誤，review_count → 1，next_review 2026-11-21）
+- lint：0 errors，0 warnings；wiki/raw 0.30
+- 待使用者處理：沿用上次：D3 是否改為單一寫入者（review/2026-W47.md）；earnings 與 SSOT 的待確認事實；複習排程是否改用 SM-2
+
 ## 2026-11-18 deep（種子執行，手動）
 - raw：預期 29（ai-new-tech 8、system-design 21），處理 29，失敗 0，留待下次 0
 - 上限：這次是初始種子執行，未套用每次 ingest 5 份、新建 15 頁的上限；之後的排程照 `prompts/dream.md` 執行

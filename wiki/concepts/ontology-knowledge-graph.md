@@ -6,7 +6,7 @@ summary: Ontology 規定允許哪些類型與關係，Graph 存真實的節點�
 domains: [ai-new-tech]
 sources: [raw/ai-new-tech/ontology-knowledge-graph-guide.md#1, raw/ai-new-tech/ontology-knowledge-graph-guide.md#3, raw/ai-new-tech/ontology-knowledge-graph-guide.md#4, raw/ai-new-tech/ontology-knowledge-graph-guide.md#7]
 evidence: [討論結論, 我的判斷]
-related: [llm-wiki, promotion-gate]
+related: [llm-wiki, promotion-gate, ontology-knowledge-graph-x-knowledge-retrieval-design]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -42,3 +42,4 @@ next_review: 2026-11-19
 ## 相關
 - [[llm-wiki]]：另一種知識表示
 - [[promotion-gate]]：新類型先標記、人審後才加入
+- [[ontology-knowledge-graph-x-knowledge-retrieval-design]]：跨領域：寫入時合併 vs 查詢時 alias 展開

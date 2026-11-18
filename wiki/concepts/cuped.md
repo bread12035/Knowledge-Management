@@ -10,8 +10,8 @@ related: [paired-test, ai-evaluation, grader-alignment]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+review_count: 1
+next_review: 2026-11-21
 ---
 # CUPED 與變異降低（CUPED）
 

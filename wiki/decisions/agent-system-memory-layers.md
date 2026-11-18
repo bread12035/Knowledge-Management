@@ -6,7 +6,7 @@ summary: 依壽命分任務記憶、任務結果、長期知識、失敗記憶�
 domains: [ai-new-tech]
 sources: [raw/ai-new-tech/structure-of-agent-system.md#3, raw/ai-new-tech/structure-of-agent-system.md#4, raw/ai-new-tech/anthropic-agent-memory-guide.md#14]
 evidence: [使用者決定, 原文, 我的判斷]
-related: [agent-harness-design, agent-memory, promotion-gate, error-analysis-loop, skill-state]
+related: [agent-harness-design, agent-memory, promotion-gate, error-analysis-loop, skill-state, agent-system-memory-layers-x-saga-compensation]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -53,3 +53,4 @@ next_review: 2026-11-19
 - [[agent-memory]]：Anthropic 的四層模型
 - [[promotion-gate]]：升級規則的通用形式
 - [[error-analysis-loop]]：失敗記憶的來源
+- [[agent-system-memory-layers-x-saga-compensation]]：跨領域：needs-human 停止與 Saga 的 dead-letter 交人

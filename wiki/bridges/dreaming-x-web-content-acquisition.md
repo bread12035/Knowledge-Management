@@ -4,14 +4,14 @@ title: Dreaming 的不可信 transcript ↔ Agent 上網的不可信網頁
 type: bridge
 summary: 兩邊都讓 agent 讀不受控的文字；共同對策是當資料不當指示、縮小權限與爆炸半徑、關鍵動作交人
 domains: [ai-new-tech, system-design]
-sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#8.3, raw/ai-new-tech/anthropic-agent-memory-guide.md#8.8, raw/system-design/web-fetch-crawler-api-browser-agent-comparison.md#6, raw/system-design/web-fetch-crawler-api-browser-agent-comparison.md#5.3, raw/system-design/earnings-pre-earnings-gcp-to-onprem-handover-pattern.md#確認清單, raw/system-design/webhook-idempotent-worker-outbox-pattern.md#Why]
+sources: [raw/ai-new-tech/anthropic-agent-memory-guide.md#8.3, raw/ai-new-tech/anthropic-agent-memory-guide.md#8.8, raw/system-design/web-fetch-crawler-api-browser-agent-comparison.md#6, raw/system-design/web-fetch-crawler-api-browser-agent-comparison.md#5.3, raw/system-design/web-fetch-crawler-api-browser-agent-comparison.md#8, raw/system-design/earnings-pre-earnings-gcp-to-onprem-handover-pattern.md#確認清單, raw/system-design/webhook-idempotent-worker-outbox-pattern.md#Why]
 evidence: [Cookbook, 官方文件, 討論結論, 我的判斷]
 related: [dreaming, web-content-acquisition, injected-context, gateway-authn-service-authz, km-dreaming-design]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+review_count: 1
+next_review: 2026-11-21
 ---
 # Dreaming 的不可信 transcript ↔ Agent 上網的不可信網頁
 

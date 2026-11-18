@@ -10,8 +10,8 @@ related: [golden-dataset, golden-regression-gate, paired-test, error-analysis-lo
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+review_count: 1
+next_review: 2026-11-21
 ---
 # AI 評估的 golden dataset ↔ 系統設計的 golden cases
 

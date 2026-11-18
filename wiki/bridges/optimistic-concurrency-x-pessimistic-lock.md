@@ -10,8 +10,8 @@ related: [optimistic-concurrency, pessimistic-lock, single-writer, lease-reaper,
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+review_count: 1
+next_review: 2026-11-21
 ---
 # 記憶庫的 content_sha256 ↔ 資料庫的悲觀鎖與 CAS
 

@@ -6,7 +6,7 @@ summary: 跨服務流程拆成多個本地交易，失敗先冪等重試，用�
 domains: [system-design]
 sources: [raw/system-design/saga-outbox-idempotent-escalation-checkout-pattern.md#3, raw/system-design/saga-outbox-idempotent-escalation-checkout-pattern.md#4, raw/system-design/saga-outbox-idempotent-escalation-checkout-pattern.md#7, raw/system-design/pagerduty-escalation-chatops-runbook-pattern.md#業界範例]
 evidence: [討論結論]
-related: [reliable-event-processing, transactional-outbox, idempotent-consumer, event-driven-timer]
+related: [reliable-event-processing, transactional-outbox, idempotent-consumer, event-driven-timer, agent-system-memory-layers-x-saga-compensation]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -40,3 +40,4 @@ next_review: 2026-11-19
 - [[reliable-event-processing]]：整體脈絡
 - [[transactional-outbox]]、[[idempotent-consumer]]：每一步的基礎
 - [[event-driven-timer]]：escalation 的計時
+- [[agent-system-memory-layers-x-saga-compensation]]：跨領域：agent 的 needs-human 停止條件

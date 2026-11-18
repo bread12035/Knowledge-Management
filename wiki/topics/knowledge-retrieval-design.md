@@ -6,7 +6,7 @@ summary: 檢索方法的差別在關係何時建；實務上 SQL 縮範圍、摘
 domains: [system-design]
 sources: [raw/system-design/rag-methods-comparison.md#怎麼讀, raw/system-design/rag-methods-comparison.md#摘要分層, raw/system-design/rag-methods-comparison.md#查詢流程, raw/system-design/structured-rag-golden-eval-hexagonal-pattern.md#Why, raw/system-design/postgres-sag-alias-golden-eval-pattern.md#為什麼採用這些技術, raw/system-design/pagerduty-escalation-chatops-runbook-pattern.md#業界範例]
 evidence: [原文, 討論結論, 第三方, 我的判斷]
-related: [hybrid-search-rrf, event-log-current-state, postgres-hub, golden-regression-gate, deterministic-over-llm, llm-wiki-x-knowledge-retrieval-design]
+related: [hybrid-search-rrf, event-log-current-state, postgres-hub, golden-regression-gate, deterministic-over-llm, llm-wiki-x-knowledge-retrieval-design, ontology-knowledge-graph-x-knowledge-retrieval-design]
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
@@ -57,3 +57,4 @@ next_review: 2026-11-19
 - [[golden-regression-gate]]：檢索規則的回歸
 - [[deterministic-over-llm]]：SQL 縮範圍、LLM 判斷意思
 - [[llm-wiki-x-knowledge-retrieval-design]]：跨領域：wiki 與摘要分層、SQL catalog 的對照
+- [[ontology-knowledge-graph-x-knowledge-retrieval-design]]：跨領域：SAG 的 alias 表與 Graph 的 entity resolution

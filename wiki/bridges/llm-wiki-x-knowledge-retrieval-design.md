@@ -10,8 +10,8 @@ related: [llm-wiki, knowledge-retrieval-design, progressive-disclosure, dreaming
 status: active
 created: 2026-11-18
 last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+review_count: 1
+next_review: 2026-11-21
 ---
 # LLM wiki 與記憶分層 ↔ 檢索的摘要分層與 SQL catalog
 
