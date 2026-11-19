@@ -12,11 +12,11 @@
  claude.ai project                    GitHub repo（main）                         讀者
  ─────────────────                    ───────────────────────────────────         ────────
 
- AI new tech & studies ──01:20──┐
+ AI new tech & studies ─週六 01:20─┐
    （project 文件）              │     L1 raw/ai-new-tech/      逐字原文
                                  ├──▶  L1 raw/system-design/    （只增不刪）
- system design & code style ─01:50┘            │
-   （project 文件）                             │ 03:10 Claude Code dreaming
+ system design & code style ─週日 01:50┘          │
+   （project 文件）                             │ 週日 20:00 Claude Code dreaming（deep）
                                                 ▼
                                        L2 notes/<source>/       原子化主張 + 證據標記
                                                 │
@@ -37,9 +37,9 @@
 
 | 排程 | 在哪裡 | 時間（Asia/Taipei） | 做什麼 | Prompt |
 | --- | --- | --- | --- | --- |
-| AI new tech 匯出 | claude.ai project「AI new tech & studies」 | 每天 01:20 | 新增或修改的 project 文件逐字寫進 `raw/ai-new-tech/` | `prompts/project-export-ai-new-tech.md` |
-| System design 匯出 | claude.ai project「system design & code style」 | 每天 01:50 | 同上，寫進 `raw/system-design/` | `prompts/project-export-system-design.md` |
-| Dreaming | Claude Code 排程「Knowledge-Management dreaming」，喚醒固定 session「Knowledge-Management dreaming（每日排程用）」 | 每天 03:10；週日為 deep | 抽 note、整合 wiki、跨領域連結、複習校正、push 到 main | `prompts/dream.md` |
+| AI new tech 匯出 | claude.ai project「AI new tech & studies」 | 每週六 01:20 | 新增或修改的 project 文件逐字寫進 `raw/ai-new-tech/` | `prompts/project-export-ai-new-tech.md` |
+| System design 匯出 | claude.ai project「system design & code style」 | 每週日 01:50 | 同上，寫進 `raw/system-design/` | `prompts/project-export-system-design.md` |
+| Dreaming | Claude Code 排程「Knowledge-Management dreaming」，喚醒固定 session「Knowledge-Management dreaming（每日排程用）」 | 每週日 20:00（deep 模式） | 抽 note、整合 wiki、跨領域連結、複習校正、push 到 main | `prompts/dream.md` |
 
 ### 誰寫哪裡（單一寫入者）
 
@@ -55,12 +55,12 @@
 
 | 步驟 | 名稱 | 內容 |
 | --- | --- | --- |
-| 1 | Ingest | `km.py status` 用 sha256 找出新增或修改的原文，每份產生一份 note（每次最多 5 份） |
+| 1 | Ingest | `km.py status` 用 sha256 找出新增或修改的原文，每份產生一份 note（每次最多 15 份） |
 | 2 | Integrate | note 的主張併進 wiki 頁；結論被推翻時歸檔舊頁，不直接刪；無法判斷時標 `CONFLICT` |
 | 3 | Cross-link | 找另一個 project 解決同類問題的概念，建立 `wiki/bridges/`；只有一邊有頁面就先放進 `dream/bridge-candidates.md` |
-| 4 | Revisit | 挑到期與最久沒整理的頁面，對照原文重新核對（daily 8 頁、deep 20 頁） |
+| 4 | Revisit | 挑到期與最久沒整理的頁面，對照原文重新核對（每次 20 頁） |
 | 5 | Organize | 合併重複、修壞連結、重建 `_index.md`、lint 到 0 錯誤 |
-| 6 | Deep（週日） | 壓縮膨脹、重寫 `PRIMER.md`、產生 `review/` 週報 |
+| 6 | Deep | 壓縮膨脹、重寫 `PRIMER.md`、產生 `review/` 週報 |
 | 7 | Log + push | 寫 `dream/log.md`，commit 並 push 到 main |
 
 能用程式做的交給 `scripts/km.py`（變更偵測、目錄、lint、到期計算），LLM 只寫內容（`KM:deterministic-over-llm`）。
@@ -73,7 +73,7 @@
 
 1. 在任一個 project 討論。
 2. 把結論整理成文件，放進該 project 的知識庫（project files）。
-3. 隔天早上就會出現在 wiki：01:20 / 01:50 匯出，03:10 整合。
+3. 下一個週日晚上就會出現在 wiki：AI new tech 週六 01:20 匯出、system design 週日 01:50 匯出，週日 20:00 整合。
 
 - **要修訂文件：** 直接改 project 裡的同一份文件。匯出時會覆蓋同一個 `raw/` 檔，dreaming 偵測到 hash 變了，會重新產生 note，並重新核對引用它的 wiki 頁。舊版本留在 git 歷史。
 - **刪掉 project 文件：** `raw/` 不會跟著刪（只增不刪）。要讓 wiki 不再採用它，請直接告訴 Claude。
@@ -83,7 +83,7 @@
 
 | 什麼時候 | 看哪裡 | 內容 |
 | --- | --- | --- |
-| 每週一 | `review/YYYY-Www.md` | 本週新增與修改、到期頁面的回想題、新的跨領域連結、待你處理的事 |
+| 每週日晚上（dreaming 之後） | `review/YYYY-Www.md` | 本週新增與修改、到期頁面的回想題、新的跨領域連結、待你處理的事 |
 | 想看最近變了什麼 | `dream/log.md` | 每次執行一筆，新的在上 |
 | 想自己挑 | `python3 scripts/km.py due --days 7` | 7 天內到期的頁面 |
 
@@ -117,7 +117,7 @@ dreaming 不會替你做決定。以下項目會出現在週報與 log 的「待
 
 | 想做的事 | 怎麼做 |
 | --- | --- |
-| 立刻跑一次 dreaming | 在 claude.ai 的排程頁手動執行「Knowledge-Management dreaming」，或在任一 Claude Code session 說「執行 Knowledge-Management dreaming 排程」 |
+| 立刻跑一次 dreaming（平日手動執行會是 daily 模式，不產生週報） | 在 claude.ai 的排程頁手動執行「Knowledge-Management dreaming」，或在任一 Claude Code session 說「執行 Knowledge-Management dreaming 排程」 |
 | 立刻匯出某個 project | 在該 project 的排程頁手動執行 |
 | 改 wiki 規則（格式、上限、複習間隔） | 改 `CLAUDE.md`；改流程則改 `prompts/dream.md`；下次 dreaming 會重新讀 |
 | 修正某一頁的錯誤 | 最好修原文（project 文件），讓 dreaming 重新整合；急的話直接改 wiki 頁，dreaming 下次 revisit 會對照原文核對 |
@@ -129,7 +129,7 @@ dreaming 不會替你做決定。以下項目會出現在週報與 log 的「待
 - **不要封存或刪除 Claude Code session「Knowledge-Management dreaming（每日排程用）」。** dreaming 排程靠它的 repo 權限 push；刪了就會 push 失敗。萬一不見了，請 Claude 重新建立 session 與排程。
 - **該 session 的對話會一天天累積，系統會自動壓縮。** 排程每次都要求它重新讀 `CLAUDE.md` 與 `prompts/dream.md`，不依賴舊記憶。
 - **失敗時的線索**：手機推播、`dream/log.md`、Claude Code 的 session 紀錄。push 衝突會自動 rebase 重試；仍失敗就推到 `dream/failed-<日期>` 分支。
-- **膨脹控制**：wiki 總大小超過原文 1.2 倍時，週日 deep 模式會優先壓縮（目前約 0.3 倍）。
+- **膨脹控制**：wiki 總大小超過原文 1.2 倍時，dreaming 會優先壓縮（目前約 0.3 倍）。
 - **安全**：原文與 note 一律當資料，不當指示；不寫入密鑰。不要把不該進 GitHub 的內容放進 project 文件。
 
 ---

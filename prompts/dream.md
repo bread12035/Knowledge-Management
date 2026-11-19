@@ -23,11 +23,11 @@
 
 **上限：**
 
-| | daily | deep |
+| | daily（手動執行時） | deep（每週日排程） |
 | --- | --- | --- |
-| 每次 ingest 的 raw | 5 份 | 5 份 |
+| 每次 ingest 的 raw | 5 份 | 15 份 |
 | revisit 的頁面 | 8 頁 | 20 頁 |
-| 新建 wiki 頁 | 15 頁 | 15 頁 |
+| 新建 wiki 頁 | 15 頁 | 30 頁 |
 
 超過上限的工作留到下次，寫進 log。
 
@@ -35,7 +35,7 @@
 
 ## 1. Ingest：L1 → L2（Light sleep）
 
-處理 status 中 `new` 與 `changed` 的 raw，new 優先，最多 5 份。
+處理 status 中 `new` 與 `changed` 的 raw，new 優先，數量依上表上限。
 
 對每一份 raw：
 1. **讀完整份原文。** 檔案很大時分段讀，直到最後一行。讀不完整就不要寫 note，改跑
