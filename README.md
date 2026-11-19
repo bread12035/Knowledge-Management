@@ -83,7 +83,7 @@
 
 | 什麼時候 | 看哪裡 | 內容 |
 | --- | --- | --- |
-| 每週日晚上（dreaming 之後） | `review/YYYY-Www.md` | 本週新增與修改、到期頁面的回想題、新的跨領域連結、待你處理的事 |
+| 每週日晚上（dreaming 跑完會在「Knowledge-Management dreaming（每日排程用）」session 留一則提醒） | `review/YYYY-Www.md` | 本週新增與修改、到期頁面的回想題、新的跨領域連結、待你處理的事 |
 | 想看最近變了什麼 | `dream/log.md` | 每次執行一筆，新的在上 |
 | 想自己挑 | `python3 scripts/km.py due --days 7` | 7 天內到期的頁面 |
 
