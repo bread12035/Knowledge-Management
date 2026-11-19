@@ -300,7 +300,7 @@ def cmd_lint(_: list[str]) -> int:
     conflicts = [s for s, (_, m, _) in pages.items() if m.get("status") == "conflict"]
     print(f"pages: {len(pages)}  raw: {raw_bytes} B  wiki: {wiki_bytes} B  ratio: {ratio:.2f}")
     if ratio > BLOAT_LIMIT:
-        warns.append(f"wiki/raw ratio {ratio:.2f} > {BLOAT_LIMIT}: compress in deep mode")
+        warns.append(f"wiki/raw ratio {ratio:.2f} > {BLOAT_LIMIT}: compress in next dreaming run")
     if conflicts:
         print(f"conflict pages: {', '.join(sorted(conflicts))}")
     for e in errors:

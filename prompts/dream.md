@@ -15,19 +15,17 @@
    ```bash
    git fetch origin main && git checkout -B main origin/main
    ```
-2. 決定模式：
-   - `TZ=Asia/Taipei date +%u` 等於 `7`（週日），或觸發訊息寫了 `mode: deep` → **deep**。
-   - 其他 → **daily**。
+2. 只有一種流程（每週一次，排程在週日 20:00）；手動執行也跑完整流程，同一週再跑會覆蓋當週週報。
 3. 讀：`CLAUDE.md`、`PRIMER.md`、`wiki/_index.md`、`dream/log.md` 最後 3 筆、`dream/bridge-candidates.md`。
 4. 跑 `python3 scripts/km.py status`，記下 new / changed / failed 的數量（之後對帳用）。
 
 **上限：**
 
-| | daily（手動執行時） | deep（每週日排程） |
-| --- | --- | --- |
-| 每次 ingest 的 raw | 5 份 | 15 份 |
-| revisit 的頁面 | 8 頁 | 20 頁 |
-| 新建 wiki 頁 | 15 頁 | 30 頁 |
+| 項目 | 每次上限 |
+| --- | --- |
+| ingest 的 raw | 15 份 |
+| revisit 的頁面 | 20 頁 |
+| 新建 wiki 頁 | 30 頁 |
 
 超過上限的工作留到下次，寫進 log。
 
@@ -52,7 +50,7 @@
 
 ---
 
-## 2. Integrate：L2 → L3（Deep sleep，建立 representation）
+## 2. Integrate：L2 → L3（建立 representation）
 
 只有你一個人寫 wiki，依序處理，不要平行寫 wiki。
 
@@ -63,7 +61,7 @@
    - 只是原文的細節、對複習或設計沒用 → 不進 wiki（note 裡留著就好）。
 2. `changed` 的 raw：找出 `sources` 含這份 raw 的所有頁面，用新 note 重新核對。
    結論被推翻時，依 `CLAUDE.md` §4.5 取代，不要直接改掉舊說法；無法判斷時依 §4.6 寫 CONFLICT。
-3. 被實質修改的頁面：`review_count = 0`、`next_review = 明天`、`last_dreamed = 今天`。
+3. 被實質修改的頁面：`review_count = 0`、`next_review = 今天 + 7`、`last_dreamed = 今天`。
 4. 遇到原文中標記 `{OPTIONAL}` 的設計項目：照實記錄為「待使用者決定」，不要替使用者做決定。
 
 **第一次執行（wiki 是空的）：** 先建 1 個 topic 頁當骨架（例：`agent-memory`），再建它底下的
@@ -88,7 +86,7 @@ concept / pattern / decision。寧少勿多：先建會被引用的核心頁面�
 
 ## 4. Revisit：反覆校正（Correct memory）
 
-1. 跑 `python3 scripts/km.py due --oldest <K>`（daily K=8，deep K=20）。
+1. 跑 `python3 scripts/km.py due --days 6 --oldest 20`（到下次執行前會到期的頁面，加上最久沒整理的頁面；K = 20）。
    先處理 due 的頁面，再處理最久沒整理的頁面，總數不超過 K。第 2 步剛改過的頁面跳過。
 2. 對每一頁：
    - 回到 `sources` 指向的 raw 章節，逐條核對「重點」。錯的改正，過時的依 §4.5 處理。
@@ -106,7 +104,7 @@ concept / pattern / decision。寧少勿多：先建會被引用的核心頁面�
 
 ---
 
-## 6. Deep 模式額外工作（daily 跳過）
+## 6. 壓縮、Promote、週報
 
 1. **壓縮與遺忘：** lint 的 wiki/raw 比例 > 1.2 時，合併相近頁面、刪去重複敘述（改成連結）。
    不再被任何頁面引用、內容已被涵蓋的頁面，改成 stub 或歸檔。
@@ -134,7 +132,7 @@ concept / pattern / decision。寧少勿多：先建會被引用的核心頁面�
 
 1. 在 `dream/log.md` 最上方（標題之下）加一筆：
    ```
-   ## <YYYY-MM-DD> <daily|deep>
+   ## <YYYY-MM-DD> weekly
    - raw：預期 <new+changed>，處理 <n>，失敗 <n>（<路徑與原因>），留待下次 <n>
    - notes：新增 <slug…>；更新 <slug…>
    - wiki：新增 <slug…>；更新 <slug…>；合併/取代 <slug…>
@@ -146,7 +144,7 @@ concept / pattern / decision。寧少勿多：先建會被引用的核心頁面�
 2. Commit（只 add 你負責的路徑）：
    ```bash
    git add notes wiki review dream PRIMER.md
-   git commit -m "dream(<daily|deep>): <YYYY-MM-DD> ingest <n>, wiki +<a> ~<b>, bridges +<c>"
+   git commit -m "dream(weekly): <YYYY-MM-DD> ingest <n>, wiki +<a> ~<b>, bridges +<c>"
    ```
 3. Push 到 main，被拒時 rebase 後重試，最多 3 次：
    ```bash

@@ -202,7 +202,7 @@ bridge 頁的正文改用：
 - 單頁上限 8 KB；超過就拆成 topic + 多個 concept。
 - 寧可連結，不要複製：同一段內容只寫在一頁，其他頁用 `[[slug]]` 指過去。
 - 不為原文的每一節建一頁。只有會被跨頁引用、或會在設計中被用到的東西才值得一頁。
-- `km.py lint` 會報告 wiki 總大小與 raw 總大小的比例；超過 1.2 倍時，deep 模式要優先壓縮。
+- `km.py lint` 會報告 wiki 總大小與 raw 總大小的比例；超過 1.2 倍時，dreaming 要優先壓縮。
 
 ### 4.8 `wiki/_index.md`
 
@@ -214,9 +214,9 @@ bridge 頁的正文改用：
 ## 5. 複習欄位（間隔重複）
 
 - 頁面被 revisit 並確認無誤後：`review_count += 1`，`last_dreamed = 今天`，
-  `next_review = 今天 + 間隔`，間隔依 `review_count`：1→3 天、2→7、3→14、4→30、5 以上→60。
-- 頁面內容有實質修改時，`review_count` 歸 0，`next_review = 今天 + 1`。
-- `review/YYYY-Www.md`（deep 模式產生）列出本週新增與修改、到期要複習的頁面與回想題。
+  `next_review = 今天 + 間隔`，間隔依 `review_count`：1→7 天、2→14、3→30、4→60、5 以上→90（dreaming 每週執行，間隔以週為單位）。
+- 頁面內容有實質修改時，`review_count` 歸 0，`next_review = 今天 + 7`（下一週）。
+- `review/YYYY-Www.md`（每次 dreaming 產生）列出本週新增與修改、到期要複習的頁面與回想題。
 
 ---
 

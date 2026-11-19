@@ -16,7 +16,7 @@
    （project 文件）              │     L1 raw/ai-new-tech/      逐字原文
                                  ├──▶  L1 raw/system-design/    （只增不刪）
  system design & code style ─週日 01:50┘          │
-   （project 文件）                             │ 週日 20:00 Claude Code dreaming（deep）
+   （project 文件）                             │ 週日 20:00 Claude Code dreaming
                                                 ▼
                                        L2 notes/<source>/       原子化主張 + 證據標記
                                                 │
@@ -39,7 +39,7 @@
 | --- | --- | --- | --- | --- |
 | AI new tech 匯出 | claude.ai project「AI new tech & studies」 | 每週六 01:20 | 新增或修改的 project 文件逐字寫進 `raw/ai-new-tech/` | `prompts/project-export-ai-new-tech.md` |
 | System design 匯出 | claude.ai project「system design & code style」 | 每週日 01:50 | 同上，寫進 `raw/system-design/` | `prompts/project-export-system-design.md` |
-| Dreaming | Claude Code 排程「Knowledge-Management dreaming」，喚醒固定 session「Knowledge-Management dreaming（每日排程用）」 | 每週日 20:00（deep 模式） | 抽 note、整合 wiki、跨領域連結、複習校正、push 到 main | `prompts/dream.md` |
+| Dreaming | Claude Code 排程「Knowledge-Management dreaming」，喚醒固定 session「Knowledge-Management dreaming（每日排程用）」 | 每週日 20:00 | 抽 note、整合 wiki、跨領域連結、複習校正、push 到 main | `prompts/dream.md` |
 
 ### 誰寫哪裡（單一寫入者）
 
@@ -60,7 +60,7 @@
 | 3 | Cross-link | 找另一個 project 解決同類問題的概念，建立 `wiki/bridges/`；只有一邊有頁面就先放進 `dream/bridge-candidates.md` |
 | 4 | Revisit | 挑到期與最久沒整理的頁面，對照原文重新核對（每次 20 頁） |
 | 5 | Organize | 合併重複、修壞連結、重建 `_index.md`、lint 到 0 錯誤 |
-| 6 | Deep | 壓縮膨脹、重寫 `PRIMER.md`、產生 `review/` 週報 |
+| 6 | 週報 | 壓縮膨脹、重寫 `PRIMER.md`、產生 `review/` 週報 |
 | 7 | Log + push | 寫 `dream/log.md`，commit 並 push 到 main |
 
 能用程式做的交給 `scripts/km.py`（變更偵測、目錄、lint、到期計算），LLM 只寫內容（`KM:deterministic-over-llm`）。
@@ -87,7 +87,7 @@
 | 想看最近變了什麼 | `dream/log.md` | 每次執行一筆，新的在上 |
 | 想自己挑 | `python3 scripts/km.py due --days 7` | 7 天內到期的頁面 |
 
-複習間隔：頁面每被核對一次就拉長（3、7、14、30、60 天）；內容有實質修改就重新從 1 天開始（`CLAUDE.md` §5）。
+複習間隔：頁面每被核對一次就拉長（7、14、30、60、90 天）；內容有實質修改就排回下一週（`CLAUDE.md` §5）。
 
 ### 2.3 查詢與設計時引用
 
@@ -117,7 +117,7 @@ dreaming 不會替你做決定。以下項目會出現在週報與 log 的「待
 
 | 想做的事 | 怎麼做 |
 | --- | --- |
-| 立刻跑一次 dreaming（平日手動執行會是 daily 模式，不產生週報） | 在 claude.ai 的排程頁手動執行「Knowledge-Management dreaming」，或在任一 Claude Code session 說「執行 Knowledge-Management dreaming 排程」 |
+| 立刻跑一次 dreaming（跑完整流程；同一週再跑會覆蓋當週週報） | 在 claude.ai 的排程頁手動執行「Knowledge-Management dreaming」，或在任一 Claude Code session 說「執行 Knowledge-Management dreaming 排程」 |
 | 立刻匯出某個 project | 在該 project 的排程頁手動執行 |
 | 改 wiki 規則（格式、上限、複習間隔） | 改 `CLAUDE.md`；改流程則改 `prompts/dream.md`；下次 dreaming 會重新讀 |
 | 修正某一頁的錯誤 | 最好修原文（project 文件），讓 dreaming 重新整合；急的話直接改 wiki 頁，dreaming 下次 revisit 會對照原文核對 |
