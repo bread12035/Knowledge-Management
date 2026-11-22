@@ -9,9 +9,9 @@ evidence: [原文, 討論結論, 我的判斷, Cookbook, 使用者決定]
 related: [agent-harness-design, skill-state, dreaming, deterministic-over-llm]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # Pass by reference（資料留在環境，prompt 只放引用）
 

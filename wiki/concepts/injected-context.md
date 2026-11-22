@@ -9,9 +9,9 @@ evidence: [原文, Cookbook, 我的判斷]
 related: [agent-memory, progressive-disclosure, dreaming, promotion-gate]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # Injected context（常駐記憶層）
 

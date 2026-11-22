@@ -78,6 +78,12 @@
       "note": "notes/system-design/earnings-video2text-gcp-to-onprem-handover-pattern.note.md",
       "sha256": "058927157120aab022bfe50793cdd974967fe930f84b775173c04b849980c482"
     },
+    "raw/system-design/flash-sale-scheduled-release-pointer-saga-rollback-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-22",
+      "note": "notes/system-design/flash-sale-scheduled-release-pointer-saga-rollback-pattern.note.md",
+      "sha256": "f8a165153ab53015797370c540525d0beaf369c2624d9e04b407a60e56c58c64"
+    },
     "raw/system-design/http-api-vs-html-curl-cloudflare-bot-policy.md": {
       "failures": 0,
       "ingested_at": "2026-11-18",
@@ -137,6 +143,12 @@
       "ingested_at": "2026-11-18",
       "note": "notes/system-design/scanner-executor-timingwheel-nooa-pattern.note.md",
       "sha256": "b1b7ce2df4f64cb2040fdc659a998f0d52b1a656d5f435bb2e14744200398b89"
+    },
+    "raw/system-design/seat-hold-cas-timingwheel-outbox-ticketing-pattern.md": {
+      "failures": 0,
+      "ingested_at": "2026-11-22",
+      "note": "notes/system-design/seat-hold-cas-timingwheel-outbox-ticketing-pattern.note.md",
+      "sha256": "bf4b707b380273298bd2df8c33e6abca0038eb3c42bfa113359bace6f9a9e907"
     },
     "raw/system-design/single-source-of-truth-postgres-gcs-release-pattern.md": {
       "failures": 0,

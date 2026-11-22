@@ -9,9 +9,9 @@ evidence: [使用者決定, 我的判斷, OPTIONAL]
 related: [dreaming, single-writer, optimistic-concurrency, memory-salience, agent-memory, injected-context]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # 使用者的 dreaming 實作決定（D1–D5）與本 repo
 

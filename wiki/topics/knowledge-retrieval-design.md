@@ -9,9 +9,9 @@ evidence: [原文, 討論結論, 第三方, 我的判斷]
 related: [hybrid-search-rrf, event-log-current-state, postgres-hub, golden-regression-gate, deterministic-over-llm, llm-wiki-x-knowledge-retrieval-design, ontology-knowledge-graph-x-knowledge-retrieval-design]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # 知識檢索設計（Knowledge retrieval design）
 

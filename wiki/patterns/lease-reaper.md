@@ -6,12 +6,12 @@ summary: 用 FOR UPDATE SKIP LOCKED 領工作並設 lease，到期沒 ack 由 re
 domains: [system-design]
 sources: [raw/system-design/transactional-outbox-lease-reaper-idempotent-consumer-pattern.md#可執行範例, raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md#4, raw/system-design/postgres-hub-hybrid-search-peer-spaced-repetition-pattern.md#業界經典範例]
 evidence: [討論結論]
-related: [reliable-event-processing, transactional-outbox, idempotent-consumer, event-driven-timer, pessimistic-lock, postgres-hub]
+related: [reliable-event-processing, transactional-outbox, idempotent-consumer, event-driven-timer, pessimistic-lock, postgres-hub, seat-hold]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # Lease 與 reaper（Postgres queue 的工作回收）
 
@@ -46,3 +46,4 @@ RETURNING id, event_id, payload;
 - [[event-driven-timer]]：reaper 的計時
 - [[pessimistic-lock]]：lease lock 的分類
 - [[postgres-hub]]：為什麼用 Postgres 當 queue
+- [[seat-hold]]：同結構，到期回收的是資源（座位）

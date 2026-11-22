@@ -4,14 +4,14 @@ title: 可靠的事件處理（Reliable event processing）
 type: topic
 summary: at-least-once 傳輸下讓業務效果只發生一次：outbox、冪等消費、lease 回收、Saga 補償、精準計時、明確完成信號
 domains: [system-design]
-sources: [raw/system-design/transactional-outbox-lease-reaper-idempotent-consumer-pattern.md#為什麼採用這些技術, raw/system-design/saga-outbox-idempotent-escalation-checkout-pattern.md#5, raw/system-design/dunning-retry-webhook-idempotent-timingwheel-pattern.md#5, raw/system-design/webhook-idempotent-worker-outbox-pattern.md#Why]
+sources: [raw/system-design/transactional-outbox-lease-reaper-idempotent-consumer-pattern.md#為什麼採用這些技術, raw/system-design/saga-outbox-idempotent-escalation-checkout-pattern.md#5, raw/system-design/dunning-retry-webhook-idempotent-timingwheel-pattern.md#5, raw/system-design/webhook-idempotent-worker-outbox-pattern.md#Why, raw/system-design/seat-hold-cas-timingwheel-outbox-ticketing-pattern.md#重點要解決的問題]
 evidence: [討論結論, 使用者決定]
-related: [transactional-outbox, idempotent-consumer, lease-reaper, saga-compensation, event-driven-timer, completion-marker, gateway-authn-service-authz, worker-monitor-split, golden-regression-gate, pessimistic-lock]
+related: [transactional-outbox, idempotent-consumer, lease-reaper, saga-compensation, event-driven-timer, completion-marker, gateway-authn-service-authz, worker-monitor-split, golden-regression-gate, pessimistic-lock, seat-hold]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
+last_dreamed: 2026-11-22
 review_count: 0
-next_review: 2026-11-19
+next_review: 2026-11-29
 ---
 # 可靠的事件處理（Reliable event processing）
 
@@ -19,7 +19,7 @@ next_review: 2026-11-19
 
 ## 重點
 - At-least-once 傳輸加冪等消費，得到 effectively-once 的業務效果 {討論結論}
-- 每個失敗模式對應一個解法：資料改了事件沒發 → [[transactional-outbox]]；重複投遞 → [[idempotent-consumer]]；worker 當機卡住 → [[lease-reaper]]；跨服務一致性 → [[saga-compensation]]；補償失敗 → dead-letter + escalation {討論結論}
+- 每個失敗模式對應一個解法：資料改了事件沒發 → [[transactional-outbox]]；重複投遞 → [[idempotent-consumer]]；worker 當機卡住 → [[lease-reaper]]；跨服務一致性 → [[saga-compensation]]；稀缺資源先占後確認 → [[seat-hold]]；補償失敗 → dead-letter + escalation {討論結論}
 - 同步與去重的依據是明確信號，不是時間或次數的猜測（[[completion-marker]]、idempotency key）{討論結論}
 - 何時做用 [[event-driven-timer]]；做的內容對不對用 generator/evaluator + 人，兩層獨立 {討論結論}
 - 傳輸層、去重層、業務層、排程層各自可稽核，出錯可定位（[[worker-monitor-split]]）{討論結論}
@@ -54,3 +54,4 @@ next_review: 2026-11-19
 - [[gateway-authn-service-authz]]、[[worker-monitor-split]]：分層
 - [[golden-regression-gate]]：改規則前的回歸
 - [[pessimistic-lock]]：並行寫入的選擇
+- [[seat-hold]]：CAS + 到期釋放 + outbox 的組合範例

@@ -9,9 +9,9 @@ evidence: [我的判斷, 討論結論]
 related: [knowledge-retrieval-design, single-source-of-truth, skill-state-x-event-log-current-state]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # Event log 為主、current state 由 view 算出
 

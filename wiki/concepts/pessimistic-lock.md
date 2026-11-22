@@ -4,14 +4,14 @@ title: 悲觀鎖與其他並行寫入選擇（Pessimistic lock）
 type: concept
 summary: 先鎖再做讓後到者等待；和樂觀鎖的差別只在衝突何時處理，重做昂貴時選悲觀鎖或 single writer queue
 domains: [system-design]
-sources: [raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md#1, raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md#4, raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md#5, raw/system-design/price-watch-tiered-fetch-cas-outbox-freshness-pattern.md#Why]
+sources: [raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md#1, raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md#4, raw/system-design/pessimistic-lock-vs-occ-cas-comparison.md#5, raw/system-design/price-watch-tiered-fetch-cas-outbox-freshness-pattern.md#Why, raw/system-design/seat-hold-cas-timingwheel-outbox-ticketing-pattern.md#為什麼採用這些技術]
 evidence: [討論結論]
-related: [lease-reaper, reliable-event-processing, optimistic-concurrency-x-pessimistic-lock]
+related: [lease-reaper, reliable-event-processing, optimistic-concurrency-x-pessimistic-lock, seat-hold]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
+last_dreamed: 2026-11-22
 review_count: 0
-next_review: 2026-11-19
+next_review: 2026-11-29
 ---
 # 悲觀鎖與其他並行寫入選擇（Pessimistic lock）
 
@@ -23,6 +23,7 @@ next_review: 2026-11-19
 - 重做很貴（例如一次 LLM 呼叫要花錢）→ 悲觀鎖或 single writer queue {討論結論}
 - 持有鎖者可能掛掉 → 悲觀鎖要加 lease（[[lease-reaper]]）{討論結論}
 - 價格監控選 CAS：同商品被兩個 worker 同時抓的機率低、重抓便宜 {討論結論}
+- 演唱會搶位也選 CAS：開賣時多數人點不同座位、搶輸只要重選；悲觀鎖讓每人先 `SELECT ... FOR UPDATE` 佔住連線，尖峰時連線池會先爆（[[seat-hold]]）{討論結論}
 
 ## 細節
 | 情況 | 選擇 |
@@ -43,5 +44,6 @@ next_review: 2026-11-19
 
 ## 相關
 - [[lease-reaper]]：悲觀鎖加過期時間的實作
+- [[seat-hold]]：高併發下選 CAS 的實例
 - [[reliable-event-processing]]：並行寫入在事件處理中的位置
 - [[optimistic-concurrency-x-pessimistic-lock]]：跨領域：樂觀鎖與悲觀鎖怎麼選，重做成本是關鍵

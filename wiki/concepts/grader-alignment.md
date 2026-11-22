@@ -9,9 +9,9 @@ evidence: [原文, 討論結論, 第三方, 示意, 我的判斷]
 related: [ai-evaluation, promotion-gate, harness2, cuped, error-analysis-loop]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # Grader 代表 User（LLM-as-judge alignment）
 

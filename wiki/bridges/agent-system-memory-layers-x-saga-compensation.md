@@ -9,9 +9,9 @@ evidence: [使用者決定, 原文, 討論結論, 我的判斷]
 related: [agent-system-memory-layers, saga-compensation, promotion-gate, event-driven-timer]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # Agent 的 needs-human 停止 ↔ Saga 的 dead-letter 與 escalation
 

@@ -1,6 +1,6 @@
 # Wiki Index
 
-自動產生（`python3 scripts/km.py index`），請勿手改。更新日期：2026-11-19。
+自動產生（`python3 scripts/km.py index`），請勿手改。更新日期：2026-11-22。
 標記：`AI` = ai-new-tech，`SD` = system-design。引用格式：`KM:<slug>`。
 
 ## 主題總覽 Topics
@@ -45,6 +45,7 @@
 - [[progressive-disclosure]] `AI` — 給 agent 一個小而穩定的入口，再用指標教它往哪裡找細節，而不是一次塞進所有規則
 - [[promotion-gate]] `AI/SD` — 新教訓、規則、決策先放待定區，在多個案例重複出現且有證據才升到長期或常駐層
 - [[saga-compensation]] `SD` — 跨服務流程拆成多個本地交易，失敗先冪等重試，用盡就反向補償，補償失敗進 dead-letter 交人
+- [[seat-hold]] `SD` — 先用 CAS 暫時占住並設到期時間，再確認買下；到期由 reaper 釋放，確認與釋放兩邊都用條件寫入，讓資料庫決定唯一贏家
 - [[single-source-of-truth]] `SD` — 只有一個地方可以編輯，其他都是單向產生、可重建的複本；發布時整組寫入不可變 release，最後原子切換 pointer
 - [[single-writer]] `AI/SD` — 每份資料只讓一個寫入者負責，從結構上消除並行寫入衝突
 - [[transactional-outbox]] `SD` — 業務變更與要發出的事件寫進同一個 DB transaction，再由 relay 送出，避免資料改了事件沒發

@@ -1,6 +1,6 @@
 # Knowledge-Management Primer
 
-由 Claude 維護的 LLM wiki，整合「AI new tech & studies」與「system design & code style」兩個 project 的討論。更新：2026-11-18（deep）。
+由 Claude 維護的 LLM wiki，整合「AI new tech & studies」與「system design & code style」兩個 project 的討論。更新：2026-11-22（weekly）。
 
 ## 怎麼用
 - 查東西：先讀 `wiki/_index.md`，再讀相關頁，沿 `[[slug]]` 走；需要原文時看頁面 `sources` 指向的 `raw/`。
@@ -21,6 +21,8 @@
 - 能用程式決定的不交給 LLM；LLM 只判斷意思：KM:deterministic-over-llm
 - 大資料留在環境，prompt 只放 handle 與預覽：KM:pass-by-reference
 - 用明確信號取代猜測的時間差：KM:completion-marker
+- 先占後確認、到期自動釋放，確認與回收都用條件寫入：KM:seat-hold
+- 發布寫不可變 release 再切 pointer；回滾是指回舊版，不刪新版：KM:single-source-of-truth
 - at-least-once 加冪等，得到只生效一次：KM:idempotent-consumer、KM:transactional-outbox
 - 入口小、細節往下找；常駐層只放規則與指標：KM:progressive-disclosure、KM:injected-context
 - 新教訓先 pending，重複出現且有證據才升級：KM:promotion-gate

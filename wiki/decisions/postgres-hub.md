@@ -9,9 +9,9 @@ evidence: [使用者決定, 討論結論, 我的判斷]
 related: [lease-reaper, hybrid-search-rrf, knowledge-retrieval-design, single-source-of-truth, transactional-outbox]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # 預設一個 Postgres（Postgres as the default hub）
 

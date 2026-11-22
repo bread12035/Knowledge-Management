@@ -9,9 +9,9 @@ evidence: [原文, Cookbook, 討論結論, 使用者決定]
 related: [agent-memory, dreaming, ontology-knowledge-graph, progressive-disclosure, km-dreaming-design, llm-wiki-x-knowledge-retrieval-design]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # LLM wiki（記憶表示層）
 

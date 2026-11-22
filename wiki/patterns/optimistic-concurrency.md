@@ -9,9 +9,9 @@ evidence: [官方文件, 使用者決定, 示意, 我的判斷]
 related: [single-writer, agent-memory, km-dreaming-design, optimistic-concurrency-x-pessimistic-lock]
 status: active
 created: 2026-11-18
-last_dreamed: 2026-11-18
-review_count: 0
-next_review: 2026-11-19
+last_dreamed: 2026-11-22
+review_count: 1
+next_review: 2026-11-29
 ---
 # 樂觀並行控制（Optimistic concurrency）
 
